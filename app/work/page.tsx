@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cutie } from "@/components/characters/Cutie";
+import { HiddenDaisy } from "@/components/features/EasterEggs";
 import { WorkCard } from "@/components/features/WorkCard";
 import w from "@/components/features/work.module.css";
 import { BrowserWindow } from "@/components/system/BrowserWindow";
@@ -30,6 +31,7 @@ export default function WorkPage() {
             </div>
           </li>
         </ul>
+        <HiddenDaisy id="work" className={w.egg} />
       </Section>
     </main>
   );

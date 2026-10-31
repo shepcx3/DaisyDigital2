@@ -8,7 +8,7 @@ import { onBurst } from "@/lib/toast";
 type P = { x: number; y: number; vx: number; vy: number; life: number; size: number; spin: number; color: string; star: boolean; alive: boolean };
 
 const COLORS = ["#ff8fc7", "#a9d8ff", "#c9b6f0", "#ffd75e", "#ffffff", "#7b4fd6"];
-const POOL = glitter.maxParticles + 30; // trail is capped at maxParticles; bursts get a little extra room
+const POOL = glitter.maxParticles * 2 + 30; // trail cap (doubled in sparkle mode) + room for bursts
 
 /**
  * Glitter trail (mouse only) + sparkle burst on click. One small canvas, a fixed particle pool,
@@ -37,10 +37,10 @@ export function Sparkles() {
     addEventListener("resize", resize);
 
     const spawn = (x: number, y: number, speed: number, trail: boolean) => {
-      if (trail && trailAlive >= glitter.maxParticles) return;
+      const sparkle = document.documentElement.classList.contains("sparkle-mode");
+      if (trail && trailAlive >= glitter.maxParticles * (sparkle ? 2 : 1)) return;
       const p = pool.find((q) => !q.alive);
       if (!p) return;
-      const sparkle = document.documentElement.classList.contains("sparkle-mode");
       Object.assign(p, {
         x, y, alive: true, life: 1,
         vx: (Math.random() - 0.5) * speed,

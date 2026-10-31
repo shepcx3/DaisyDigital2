@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Icon } from "@/components/icons/Icon";
 import { brand, footer, microcopy } from "@/content/site";
 import { sendForm } from "@/lib/forms";
+import { HiddenDaisy } from "./EasterEggs";
 import { toast } from "@/lib/toast";
 import s from "./footer.module.css";
 
@@ -71,6 +72,7 @@ export function DMFooter() {
         </div>
       </div>
 
+      <HiddenDaisy id="footer" className={s.egg} />
       <p className={s.legal}>
         © {new Date().getFullYear()} {brand.name} · {brand.tagline} · <Link href="/styleguide/">style guide</Link>
       </p>

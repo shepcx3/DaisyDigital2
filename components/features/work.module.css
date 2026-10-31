@@ -13,3 +13,4 @@
 .cardWrap { position: relative; z-index: 1; height: 100%; }
 .empty { display: grid; justify-items: center; align-content: center; gap: 10px; text-align: center; min-height: 150px; }
 .empty p { margin: 0; font-family: var(--font-instrument-serif); font-style: italic; font-size: 1.2rem; }
+.egg { right: 3%; bottom: 24px; }

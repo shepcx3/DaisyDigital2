@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { HiddenDaisy } from "@/components/features/EasterEggs";
 import { JoinForm } from "@/components/features/JoinForm";
+import { WateringGate } from "@/components/features/WateringGate";
 import { BrowserWindow } from "@/components/system/BrowserWindow";
 import { Section, SectionHead } from "@/components/system/layout";
 import { careers } from "@/content/site";
@@ -12,10 +14,12 @@ export default function CareersPage() {
     <main id="main">
       <Section accent="violet" labelledBy="careers-h">
         <SectionHead as="h1" id="careers-h" label={careers.label} secret="yes, you can bring your 473 tabs" title={careers.title} intro={careers.intro} />
-        {/* phase 5: the watering can sits here and blooms the form open */}
-        <BrowserWindow as="section" tab="join_the_team.exe" icon="watering-can" className={s.window} aria-label="application form">
-          <JoinForm />
-        </BrowserWindow>
+        <WateringGate>
+          <BrowserWindow as="section" tab="join_the_team.exe" icon="watering-can" className={s.window} aria-label="application form">
+            <JoinForm />
+          </BrowserWindow>
+        </WateringGate>
+        <HiddenDaisy id="careers" className={s.egg} />
       </Section>
     </main>
   );

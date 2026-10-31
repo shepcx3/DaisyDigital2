@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BeeButton } from "@/components/features/BeeButton";
 import { ContactForm } from "@/components/features/ContactForm";
 import { BrowserWindow } from "@/components/system/BrowserWindow";
 import { Section, SectionHead } from "@/components/system/layout";
@@ -15,7 +16,7 @@ export default function ContactPage() {
         <SectionHead as="h1" id="contact-h" label={contact.label} secret="we always read it" title={contact.title} intro={contact.intro} />
         <div className={s.grid}>
           <div className={s.side}>
-            {/* phase 5: the bee buzzes in here and becomes the button */}
+            <BeeButton />
             <Annotation>{microcopy.shy}</Annotation>
           </div>
           <BrowserWindow as="section" tab="new_message" icon="message" aria-label="contact form">

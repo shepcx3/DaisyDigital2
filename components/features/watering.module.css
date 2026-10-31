@@ -1,0 +1,42 @@
+.gate { display: grid; justify-items: center; gap: 18px; }
+.garden { position: relative; width: min(440px, 100%); height: 250px; }
+.can {
+  position: absolute; left: 0; top: 18px; width: 170px; z-index: 2;
+  background: none; border: 0; padding: 0;
+  transform-origin: 30% 80%;
+  transition: rotate var(--dur-base) var(--ease-bounce);
+}
+.can svg { width: 100%; display: block; }
+.can:hover, .can:focus-visible, .open .can { rotate: 26deg; }
+.drops { position: absolute; left: 168px; top: 76px; width: 80px; height: 90px; pointer-events: none; }
+.drops i { position: absolute; top: 0; width: 7px; height: 11px; background: var(--baby-blue); border: 1.5px solid var(--ink); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; opacity: 0; }
+.drops i:nth-child(1) { left: 0; animation-delay: 0ms; }
+.drops i:nth-child(2) { left: 22px; animation-delay: 150ms; }
+.drops i:nth-child(3) { left: 44px; animation-delay: 300ms; }
+.drops i:nth-child(4) { left: 66px; animation-delay: 450ms; }
+.can:hover ~ .drops i, .can:focus-visible ~ .drops i { animation: drip 600ms linear infinite; }
+@keyframes drip { 0% { opacity: 0; translate: 0 0; } 20% { opacity: 1; } 100% { opacity: 0; translate: 0 80px; } }
+
+.flower { position: absolute; right: 30px; bottom: 22px; width: 110px; }
+.flower svg { width: 100%; display: block; overflow: visible; }
+/* closed bud: petals folded in; blooms open on click */
+.head { transform-origin: 50px 50px; transform-box: view-box; }
+.petal { transform-box: fill-box; transform-origin: 50% 100%; scale: 0.5 0.6; transition: scale 520ms var(--ease-bounce); }
+.can:hover ~ .flower .head { animation: perk 600ms var(--ease-out); }
+@keyframes perk { 50% { rotate: -6deg; } }
+.open .petal { scale: 1; }
+.open .head { animation: spin-in 520ms var(--ease-bounce); }
+@keyframes spin-in { from { rotate: -60deg; } }
+
+.soil { position: absolute; left: 34%; right: -2%; bottom: 0; height: 26px; background: #6b3f26; border: var(--border); border-radius: 50% 50% 10px 10px / 100% 100% 10px 10px; }
+.hint { position: absolute; left: 0; top: -14px; font-family: var(--font-instrument-serif); font-style: italic; font-size: 1.15rem; color: var(--ink-soft); }
+
+.applyLink { font: inherit; font-weight: 500; color: var(--ink); background: none; border: 0; padding: 4px 6px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: var(--violet); text-underline-offset: 5px; }
+.panel { width: 100%; animation: pop-in 420ms var(--ease-bounce); }
+@keyframes pop-in { from { opacity: 0; translate: 0 16px; scale: 0.97; } }
+
+@media (max-width: 480px) {
+  .can { width: 130px; }
+  .drops { left: 128px; top: 58px; }
+  .flower { right: 6px; width: 92px; }
+}

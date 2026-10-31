@@ -104,6 +104,16 @@ html[data-calm="on"] ::view-transition-old(*) { animation: 150ms ease both vt-fa
 html[data-calm="on"] ::view-transition-new(*) { animation: 150ms ease both vt-fade-in !important; }
 @keyframes vt-fade-in { from { opacity: 0; } }
 
+/* ---------- sparkle mode (easter egg): chrome shimmer on headings ---------- */
+html.sparkle-mode :is(h1, h2) {
+  background: linear-gradient(110deg, #9a9eab 0%, #ffffff 20%, #b9bcc6 35%, #ff8fc7 50%, #a9d8ff 65%, #ffffff 80%, #9a9eab 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+  animation: chrome-shimmer 2.4s linear infinite;
+}
+@keyframes chrome-shimmer { to { background-position: -250% 0; } }
+
 /* ---------- page transitions ---------- */
 /* default: "new tab opening" (window scales up from the top) */
 ::view-transition-old(.tab-open) { animation: var(--dur-fast) ease-out both vt-fade-out; }

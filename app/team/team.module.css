@@ -2,3 +2,4 @@
 .holder { display: flex; justify-content: center; margin-top: 40px; }
 .holder > span { --size: 80px; }
 @media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+.egg { left: 4%; top: 30px; }

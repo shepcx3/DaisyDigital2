@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cutie } from "@/components/characters/Cutie";
 import { ProfileCard } from "@/components/characters/ProfileCard";
+import { HiddenDaisy } from "@/components/features/EasterEggs";
 import { Section, SectionHead } from "@/components/system/layout";
 import { team } from "@/content/site";
 import s from "./team.module.css";
@@ -16,6 +17,7 @@ export default function TeamPage() {
           {team.map((m) => <ProfileCard key={m.slug} m={m} />)}
         </div>
         <div className={s.holder} aria-hidden="true"><Cutie who="bri" pose="hold" /></div>
+        <HiddenDaisy id="team" className={s.egg} />
       </Section>
     </main>
   );

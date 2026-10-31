@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fredoka, Instrument_Serif, Silkscreen } from "next/font/google";
 import { ViewTransition } from "react";
 import { DMFooter } from "@/components/features/DMFooter";
+import { KonamiSparkle } from "@/components/features/EasterEggs";
 import { InlineScript } from "@/components/InlineScript";
 import { Sparkles } from "@/components/motion/Sparkles";
 import { Toaster } from "@/components/motion/Toaster";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <DMFooter />
         <Toaster />
         <Sparkles />
+        <KonamiSparkle />
       </body>
     </html>
   );
