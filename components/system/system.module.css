@@ -39,15 +39,15 @@
 .sticker {
   display: inline-block; position: relative;
   rotate: var(--rot, 0deg);
-  transition: transform var(--dur-base) var(--ease-bounce), filter var(--dur-base) var(--ease-out);
+  transition: transform var(--dur-base) var(--ease-out), filter var(--dur-base) var(--ease-out);
   transform: perspective(700px);
-  filter: drop-shadow(0 0 0 #fff) drop-shadow(3px 4px 0 rgba(59, 31, 115, 0.16));
+  filter: drop-shadow(0 0 0 #fff) drop-shadow(2px 3px 0 rgba(59, 31, 115, 0.13));
 }
-.dieCut { filter: drop-shadow(0 0 0 #fff) drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff) drop-shadow(3px 5px 0 rgba(59, 31, 115, 0.18)); }
+.dieCut { filter: drop-shadow(0 0 0 #fff) drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff) drop-shadow(2px 3px 0 rgba(59, 31, 115, 0.14)); }
 @media (hover: hover) {
   .sticker:hover {
-    transform: perspective(700px) translateY(-6px) rotateX(9deg) rotateZ(calc(var(--rot, 0deg) * -0.5));
-    filter: drop-shadow(0 0 0 #fff) drop-shadow(6px 12px 0 rgba(59, 31, 115, 0.2));
+    transform: perspective(700px) translateY(-3px) rotateX(4deg);
+    filter: drop-shadow(0 0 0 #fff) drop-shadow(3px 6px 0 rgba(59, 31, 115, 0.16));
   }
   .wobble:hover { animation: wobble 420ms var(--ease-out); }
 }
@@ -71,7 +71,7 @@
 .glow::before {
   content: ""; position: absolute; inset: -18px -24px; z-index: -1; pointer-events: none;
   background: radial-gradient(closest-side, var(--hot), transparent);
-  filter: blur(16px); opacity: 0.4;
+  filter: blur(18px); opacity: 0.22;
 }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
@@ -148,11 +148,11 @@
   overflow: hidden; white-space: nowrap;
   background: var(--violet); color: var(--offwhite);
   border-block: var(--border);
-  padding: 12px 0;
+  padding: 10px 0;
 }
-.track { display: inline-flex; width: max-content; animation: marquee 28s linear infinite; }
+.track { display: inline-flex; width: max-content; animation: marquee 48s linear infinite; }
 .marquee:hover .track { animation-play-state: paused; }
-.item { display: inline-flex; align-items: center; gap: 14px; padding-right: 14px; font-family: var(--font-fredoka); font-weight: 700; font-size: clamp(1.2rem, 3vw, 1.8rem); text-transform: lowercase; }
+.item { display: inline-flex; align-items: center; gap: 14px; padding-right: 14px; font-family: var(--font-fredoka); font-weight: 700; font-size: clamp(1.1rem, 2.4vw, 1.45rem); text-transform: lowercase; }
 .item svg { color: #ffd75e; width: 1em; height: 1em; }
 .item:nth-child(3n + 2) .word { color: transparent; -webkit-text-stroke: 1.5px var(--offwhite); }
 @keyframes marquee { to { transform: translateX(-50%); } }

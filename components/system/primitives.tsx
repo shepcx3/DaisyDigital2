@@ -5,8 +5,8 @@ import { marquee as marqueeWords } from "@/content/site";
 import { cx, seededRotation } from "@/lib/utils";
 import s from "./system.module.css";
 
-/* ---------- Sticker: die-cut border, seeded tilt, lift + wobble on hover ---------- */
-export function Sticker({ seed, children, className, dieCut = false, wobble = true, max = 4, style }: {
+/* ---------- Sticker: die-cut border, seeded tilt, gentle lift on hover (wobble is opt-in) ---------- */
+export function Sticker({ seed, children, className, dieCut = false, wobble = false, max = 2.5, style }: {
   seed: string; children: ReactNode; className?: string; dieCut?: boolean; wobble?: boolean; max?: number; style?: CSSProperties;
 }) {
   return (

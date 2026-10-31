@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main id="main">
       {/* HERO: desktop collage → stacked on mobile */}
-      <Section accent="pink" className={h.hero}>
+      <Section accent="pink" blooms className={h.hero}>
         <div className={h.collage}>
           <BrowserWindow as="article" tab="about_us.txt" icon="daisy" url="daisydigital.com" className={h.main}>
             <MicroLabel secret="psst… we already have ideas">{home.label}</MicroLabel>

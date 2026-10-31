@@ -7,7 +7,7 @@ import s from "./layout.module.css";
 type Accent = "pink" | "blue" | "violet";
 
 /** Every section declares exactly one hot accent. `dark` = violet surface with grain. */
-export function Section({ accent, dark, children, className, id, labelledBy, blooms = true }: {
+export function Section({ accent, dark, children, className, id, labelledBy, blooms = false }: {
   accent: Accent; dark?: boolean; children: ReactNode; className?: string; id?: string; labelledBy?: string; blooms?: boolean;
 }) {
   return (
