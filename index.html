@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>daisy digital ✿ creative by nature</title>
+  <meta name="description" content="daisy digital: social media, content, strategy and consulting. chronically online, creatively curious and always a few scrolls ahead.">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&family=Instrument+Serif:ital@1&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><style>.loader{display:none}.reveal{opacity:1;translate:none}.join-window[hidden]{display:block}</style></noscript>
+</head>
+<body>
+  <!-- loading: pixel daisy blooms -->
+  <div class="loader" aria-hidden="true">
+    <div class="pixel-daisy" data-pixel-daisy></div>
+    <p>brb brainstorming…</p>
+  </div>
+  <canvas id="glitter" aria-hidden="true"></canvas>
+  <div class="flash" aria-hidden="true"></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- tabbed browser nav -->
+  <header class="browser-top">
+    <div class="tabs-row">
+      <a href="#about" class="mono" aria-label="daisy digital home">
+        <img src="assets/monogram.svg" alt="">
+        <span class="tip">psst… ↑↑↓↓←→←→ b a</span>
+      </a>
+      <nav class="tabs" aria-label="sections">
+        <a class="tab" href="#about" data-tab><svg class="icon"><use href="assets/icons.svg#daisy"/></svg>about<span class="x" aria-hidden="true">×</span></a>
+        <a class="tab" href="#work" data-tab><svg class="icon"><use href="assets/icons.svg#browser"/></svg>our work<span class="x" aria-hidden="true">×</span></a>
+        <a class="tab" href="#girls" data-tab><svg class="icon"><use href="assets/icons.svg#heart"/></svg>the girls<span class="x" aria-hidden="true">×</span></a>
+        <a class="tab" href="#contact" data-tab><svg class="icon"><use href="assets/icons.svg#bee"/></svg>contact<span class="x" aria-hidden="true">×</span></a>
+        <a class="tab tab-cta" href="#growing" data-tab><svg class="icon"><use href="assets/icons.svg#watering-can"/></svg>we're growing<span class="x" aria-hidden="true">×</span></a>
+      </nav>
+      <button class="motion-toggle" type="button" aria-pressed="true">
+        <svg class="icon"><use href="assets/icons.svg#sparkle"/></svg><span class="label">motion</span> <span class="state">on</span>
+      </button>
+    </div>
+    <div class="url-bar" aria-hidden="true">
+      <span class="arrows">‹ › ↻</span>
+      <span class="url">https://daisydigital<b>/<span data-url>about</span></b></span>
+    </div>
+  </header>
+
+  <!-- scroll-triggered daisies along the side -->
+  <div class="bloom-rail" aria-hidden="true">
+    <img src="assets/daisy.svg" alt=""><img src="assets/daisy.svg" alt=""><img src="assets/daisy.svg" alt="">
+    <img src="assets/daisy.svg" alt=""><img src="assets/daisy.svg" alt=""><img src="assets/daisy.svg" alt="">
+  </div>
+
+  <main>
+    <!-- ABOUT: scrapbook desktop collage -->
+    <section id="about" class="hero" data-section>
+      <div class="wrap collage">
+        <article class="window about-window sticker reveal">
+          <div class="window-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="title"><svg class="icon"><use href="assets/icons.svg#daisy"/></svg>about_us.txt</span>
+            <span class="ctrl" aria-hidden="true">_□×</span>
+          </div>
+          <div class="window-body">
+            <span class="micro">currently obsessed: your brand</span>
+            <h1 class="wordmark"><span class="d1">daisy</span><br>digit<img class="daisy-i" src="assets/daisy.svg" alt="a">l</h1>
+            <p class="tagline">creative <span class="outline">by</span> nature</p>
+            <div class="about-copy">
+              <p><strong>chronically online, creatively curious and always a few scrolls ahead.</strong></p>
+              <p>we make brands look good, sound cool and yes, we're probably already working on your next idea.</p>
+              <p>stay cute. stay current. stay on everyone's feed.</p>
+            </div>
+            <div class="about-cta">
+              <a href="#contact" class="btn btn-hot glow" data-flash>give us a buzz <svg class="icon"><use href="assets/icons.svg#bee"/></svg></a>
+              <span class="signoff">love, daisy digital <span class="xo">xo</span></span>
+            </div>
+          </div>
+        </article>
+
+        <div class="polaroids-row">
+          <figure class="polaroid pol-1 sticker wobble reveal">
+            <div class="photo ph-1"><svg class="ph-icon"><use href="assets/icons.svg#message"/></svg></div>
+            <figcaption>brainstorm @ 2:47am</figcaption>
+          </figure>
+          <figure class="polaroid pol-2 sticker wobble reveal">
+            <div class="photo motion ph-2"><svg class="ph-icon"><use href="assets/icons.svg#film"/></svg></div>
+            <figcaption>content day ✧</figcaption>
+          </figure>
+          <figure class="polaroid pol-3 sticker wobble reveal">
+            <div class="photo ph-3"><svg class="ph-icon"><use href="assets/icons.svg#sparkle"/></svg></div>
+            <figcaption>on set, obviously</figcaption>
+          </figure>
+        </div>
+
+        <div class="torn services sticker reveal">
+          <ul aria-label="what we do">
+            <li><svg class="icon"><use href="assets/icons.svg#heart"/></svg>social media</li>
+            <li><svg class="icon"><use href="assets/icons.svg#film"/></svg>content</li>
+            <li><svg class="icon"><use href="assets/icons.svg#tabs"/></svg>strategy</li>
+            <li><svg class="icon"><use href="assets/icons.svg#sparkle"/></svg>consulting</li>
+          </ul>
+        </div>
+
+        <div class="msg-bubble sticker reveal">
+          <span class="who">new message · daisy digital</span>
+          <p>u up? 👀 we have ideas for ur brand</p>
+          <span class="read">read 2:47 am</span>
+        </div>
+
+        <div class="sticky-note note-1 sticker reveal">
+          <ul>
+            <li>check all 473 tabs</li>
+            <li class="done">spot the trend first</li>
+            <li>make ur brand everyone's fyp</li>
+          </ul>
+        </div>
+
+        <span class="badge float-sticker fs-badge" aria-hidden="true">TREND APPROVED</span>
+        <span class="float-sticker fs-xo hand sticker-text" aria-hidden="true">xo</span>
+        <svg class="float-sticker fs-butterfly" aria-hidden="true"><use href="assets/icons.svg#butterfly"/></svg>
+        <svg class="float-sticker fs-star" aria-hidden="true"><use href="assets/icons.svg#star"/></svg>
+        <div class="float-sticker fs-erica" data-sprite="erica" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>stay cute <svg class="icon"><use href="assets/icons.svg#daisy"/></svg></span><span>stay current <svg class="icon"><use href="assets/icons.svg#sparkle"/></svg></span><span>stay on everyone's feed <svg class="icon"><use href="assets/icons.svg#heart"/></svg></span><span>stay cute <svg class="icon"><use href="assets/icons.svg#daisy"/></svg></span><span>stay current <svg class="icon"><use href="assets/icons.svg#sparkle"/></svg></span><span>stay on everyone's feed <svg class="icon"><use href="assets/icons.svg#heart"/></svg></span>
+        <span>stay cute <svg class="icon"><use href="assets/icons.svg#daisy"/></svg></span><span>stay current <svg class="icon"><use href="assets/icons.svg#sparkle"/></svg></span><span>stay on everyone's feed <svg class="icon"><use href="assets/icons.svg#heart"/></svg></span><span>stay cute <svg class="icon"><use href="assets/icons.svg#daisy"/></svg></span><span>stay current <svg class="icon"><use href="assets/icons.svg#sparkle"/></svg></span><span>stay on everyone's feed <svg class="icon"><use href="assets/icons.svg#heart"/></svg></span>
+      </div>
+    </div>
+
+    <!-- OUR WORK -->
+    <section id="work" class="work" data-section>
+      <div class="wrap">
+        <div class="checker" aria-hidden="true"></div>
+        <button class="secret-daisy" style="left: 2%; top: 8px" aria-label="hidden daisy"></button>
+        <header class="section-head reveal">
+          <span class="micro">trend alert</span>
+          <h2>our work</h2>
+          <p>brands we've had the pleasure of making look good</p>
+        </header>
+        <ul class="work-grid">
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ bloom</span></div><div class="window-body"><span class="brand-name">bloom</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ glossier</span></div><div class="window-body"><span class="brand-name">glossier</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ lay low</span></div><div class="window-body"><span class="brand-name">lay low</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ strong</span></div><div class="window-body"><span class="brand-name">strong</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ holistically hip</span></div><div class="window-body"><span class="brand-name">holistically hip</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card window sticker wobble reveal"><div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ dreamers club</span></div><div class="window-body"><span class="brand-name">dreamers club</span><span class="micro">case study · soon</span></div></li>
+          <li class="work-card more window sticker reveal" style="overflow: visible">
+            <div class="peek" data-sprite="bri-head" aria-hidden="true"></div>
+            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">♡ new_tab</span></div>
+            <div class="window-body">
+              <span class="brand-name">+ more</span>
+              <p class="empty-note">this daisy hasn't bloomed yet… maybe it's yours?</p>
+              <a href="#contact" class="btn" data-flash>let's bloom</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider div-squiggle" aria-hidden="true"></div>
+
+    <!-- THE GIRLS -->
+    <section id="girls" class="girls grain" data-section>
+      <div class="wrap">
+        <button class="secret-daisy" style="right: 1%; top: -30px" aria-label="hidden daisy"></button>
+        <header class="section-head reveal">
+          <span class="micro">top 8</span>
+          <h2>the girls</h2>
+          <p>the brains (and the tabs) behind it all</p>
+        </header>
+        <div class="profiles">
+          <article class="window profile erica sticker reveal">
+            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">myspace.com/erica</span><span class="ctrl" aria-hidden="true">_□×</span></div>
+            <span class="badge chrome">404 DOLL</span>
+            <div class="window-body">
+              <div class="profile-top">
+                <div class="avatar-box">
+                  <div class="sprite-holder" data-sprite="erica" role="img" aria-label="pixel art of erica typing on a chrome laptop"></div>
+                  <div class="sig-icons" aria-hidden="true"><span><svg class="icon"><use href="assets/icons.svg#tabs"/></svg></span><span><svg class="icon"><use href="assets/icons.svg#browser"/></svg></span></div>
+                </div>
+                <div>
+                  <h3>erica</h3>
+                  <p class="role">the girl with 473 tabs open</p>
+                  <span class="micro">professional trend stalker</span>
+                </div>
+              </div>
+              <table class="myspace">
+                <tr><th>mood</th><td>already over it (it was trending tuesday)</td></tr>
+                <tr><th>status</th><td><span class="status-dot"></span>chronically online</td></tr>
+                <tr><th>tabs open</th><td><span class="tab-count" data-count="473">0</span></td></tr>
+                <tr><th>currently listening to</th><td class="typing">a sound that'll trend next week</td></tr>
+              </table>
+              <p class="bio">determined to stay young, hip and culturally aware, professional trend stalker. chronically online and convinced she knows what's cool before everyone else does.</p>
+            </div>
+          </article>
+
+          <article class="window profile bri sticker reveal">
+            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">myspace.com/bri</span><span class="ctrl" aria-hidden="true">_□×</span></div>
+            <span class="badge pink">VIRAL</span>
+            <div class="window-body">
+              <div class="profile-top">
+                <div class="avatar-box">
+                  <div class="sprite-holder" data-sprite="bri" role="img" aria-label="pixel art of bri with a lightning bolt clip holding a film reel"></div>
+                  <div class="sig-icons" aria-hidden="true"><span><svg class="icon"><use href="assets/icons.svg#bolt"/></svg></span><span><svg class="icon"><use href="assets/icons.svg#film"/></svg></span></div>
+                </div>
+                <div>
+                  <h3>bri</h3>
+                  <p class="role">the everything girl</p>
+                  <span class="micro">ceo of moving in silence</span>
+                </div>
+              </div>
+              <table class="myspace">
+                <tr><th>mood</th><td>brb, turning a random thought into a campaign</td></tr>
+                <tr><th>status</th><td><span class="status-dot"></span>recording ●</td></tr>
+                <tr><th>superpower</th><td>concepts → creations</td></tr>
+                <tr><th>currently listening to</th><td class="typing">the audio she's about to make viral</td></tr>
+              </table>
+              <p class="bio">ceo of moving in silence, from concepts to creations, she's the girl behind the magic. a little bit of everything and knows a thing or two about making a viral video. if it starts as a random thought, she'll probably turn it into a campaign.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider div-pixel" aria-hidden="true"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" data-section>
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="micro">read at 2:47am</span>
+          <h2>give us a buzz</h2>
+          <p>tell us about your brand, your big idea, or your random 2am thought</p>
+        </header>
+        <div class="contact-grid">
+          <div class="bee-stage">
+            <svg class="trail" viewBox="0 0 320 320" aria-hidden="true">
+              <path class="bee-path" d="M10 40 C 80 -10, 300 20, 280 120 S 120 260, 90 170 S 200 90, 230 170 S 180 230, 160 200"/>
+            </svg>
+            <img src="assets/daisy.svg" alt="" class="stage-daisy" aria-hidden="true">
+            <div class="bee" aria-hidden="true" data-bee></div>
+            <button type="button" class="btn btn-hot glow bee-btn">
+              <span class="rider" aria-hidden="true" data-bee></span>
+              give us a buzz
+            </button>
+            <span class="dont-be-shy annot" aria-hidden="true">don't be shy ↗</span>
+          </div>
+
+          <form class="window form-window reveal" id="contact-form" novalidate>
+            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><svg class="icon"><use href="assets/icons.svg#message"/></svg>new_message</span><span class="ctrl" aria-hidden="true">_□×</span></div>
+            <div class="window-body">
+              <div class="to-line">to: <span class="chip"><img src="assets/daisy.svg" alt="">daisy digital</span></div>
+              <div class="field-row">
+                <label class="field">your name<input name="name" required autocomplete="name"></label>
+                <label class="field">email<input name="email" type="email" required autocomplete="email"></label>
+              </div>
+              <label class="field">brand / business<input name="brand" autocomplete="organization"></label>
+              <label class="field">what can we help with?
+                <select name="service">
+                  <option>social media</option><option>content</option><option>strategy</option><option>consulting</option><option>all of the above ✧</option>
+                </select>
+              </label>
+              <label class="field">tell us everything<textarea name="message" rows="4" required placeholder="no idea is too random…"></textarea></label>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-hot glow">slide into our inbox <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></button>
+                <span class="micro">we reply faster than a trend dies</span>
+              </div>
+              <p class="form-status" role="status"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider div-daisies" aria-hidden="true"></div>
+
+    <!-- WE'RE GROWING -->
+    <section id="growing" class="growing" data-section>
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="micro">now hiring cuties</span>
+          <h2>we're growing</h2>
+          <p>think you'd bloom here? water the garden to open the application</p>
+        </header>
+
+        <div class="garden">
+          <button type="button" class="can-btn" aria-expanded="false" aria-controls="join-window">
+            <span class="can-hint annot" aria-hidden="true">hover to water · click to bloom</span>
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path d="M30 40 L100 40 L95 100 L35 100 Z" fill="#c9b6ff" stroke="#2a1450" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M100 55 L150 25 L154 31 L104 70 Z" fill="#c9b6ff" stroke="#2a1450" stroke-width="3.5" stroke-linejoin="round"/>
+              <ellipse cx="152" cy="27" rx="6" ry="9" transform="rotate(-30 152 27)" fill="#ede4ff" stroke="#2a1450" stroke-width="3"/>
+              <path d="M45 40 Q65 5 85 40" fill="none" stroke="#2a1450" stroke-width="5" stroke-linecap="round"/>
+              <g transform="translate(65 70)" fill="#fffbf7" stroke="#2a1450" stroke-width="1.5">
+                <ellipse cy="-9" rx="4" ry="7"/><ellipse cy="-9" rx="4" ry="7" transform="rotate(72)"/><ellipse cy="-9" rx="4" ry="7" transform="rotate(144)"/><ellipse cy="-9" rx="4" ry="7" transform="rotate(216)"/><ellipse cy="-9" rx="4" ry="7" transform="rotate(288)"/>
+                <circle r="4.5" fill="#ffd84d"/>
+              </g>
+            </svg>
+            <span class="sr-only">water the flowers and open the application form</span>
+          </button>
+          <div class="drops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="flowers" aria-hidden="true">
+            <div class="flower" style="--d:0s;--h:90px"><img src="assets/daisy.svg" alt=""></div>
+            <div class="flower f-pink" style="--d:.25s;--h:125px"><img src="assets/daisy.svg" alt=""></div>
+            <div class="flower" style="--d:.5s;--h:75px"><img src="assets/daisy.svg" alt=""></div>
+            <div class="flower f-blue" style="--d:.75s;--h:112px"><img src="assets/daisy.svg" alt=""></div>
+            <div class="flower" style="--d:1s;--h:88px"><img src="assets/daisy.svg" alt=""></div>
+          </div>
+          <div class="soil" aria-hidden="true"></div>
+        </div>
+        <button type="button" class="skip-link" data-open-join>or skip the watering, open the application</button>
+
+        <form class="window join-window" id="join-window" hidden novalidate>
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><svg class="icon"><use href="assets/icons.svg#watering-can"/></svg>join_the_team.exe</span><span class="ctrl" aria-hidden="true">_□×</span></div>
+          <div class="window-body">
+            <div class="field-row">
+              <label class="field">name<input name="name" required autocomplete="name"></label>
+              <label class="field">email<input name="email" type="email" required autocomplete="email"></label>
+            </div>
+            <label class="field">your socials / portfolio<input name="portfolio" placeholder="@yourhandle or a link"></label>
+            <label class="field">tell us about you<textarea name="about" rows="3" placeholder="what's in your 473 tabs right now?"></textarea></label>
+            <label class="file-drop">
+              <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+              <span class="file-label"><svg class="icon"><use href="assets/icons.svg#daisy"/></svg> this daisy hasn't bloomed yet. drop your resume here or <u>browse</u><br><small>pdf or word, max 10mb</small></span>
+            </label>
+            <div class="form-actions">
+              <span class="submit-wrap">
+                <span class="sitter" data-sprite="erica-head" aria-hidden="true"></span>
+                <button type="submit" class="btn btn-hot glow">let's bloom <svg class="icon"><use href="assets/icons.svg#daisy"/></svg></button>
+              </span>
+            </div>
+            <p class="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: DMs screen -->
+  <footer class="footer grain">
+    <div class="window dm">
+      <div class="window-bar"><span class="title" style="justify-content:center">messages</span></div>
+      <div class="dm-head">
+        <img src="assets/favicon.svg" alt="">
+        <div><b>daisy digital</b><small>● active now</small></div>
+      </div>
+      <div class="chat">
+        <div class="bub them">heyyy bestie 💌</div>
+        <div class="bub them">stay cute. stay current. stay on everyone's feed.</div>
+        <div class="bub them">love, daisy digital <span class="xo">xo</span></div>
+        <div class="bub me">ur so on trend omg</div>
+        <span class="read">read 2:47 am</span>
+        <div class="bub them chat-typing" aria-label="typing"><i></i><i></i><i></i></div>
+      </div>
+      <a href="#contact" class="dm-input" data-flash>
+        <span>slide into our inbox…</span>
+        <svg class="icon"><use href="assets/icons.svg#message"/></svg>
+      </a>
+    </div>
+    <div class="foot-links">
+      <p><a href="brand.html" data-flash-nav>brand guide</a> · <a href="#about">back to top ↑</a></p>
+      <p>© <span data-year></span> daisy digital · creative by nature</p>
+    </div>
+    <button class="secret-daisy" style="right: 6%; bottom: 20px" aria-label="hidden daisy"></button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>brand guide ✿ daisy digital</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&family=Instrument+Serif:ital@1&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="glitter" aria-hidden="true"></canvas>
+  <div class="flash" aria-hidden="true"></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <header class="browser-top">
+    <div class="tabs-row">
+      <a href="index.html" class="mono" aria-label="back to daisy digital" data-flash-nav><img src="assets/monogram.svg" alt=""></a>
+      <nav class="tabs" aria-label="pages">
+        <a class="tab" href="index.html" data-flash-nav><svg class="icon"><use href="assets/icons.svg#daisy"/></svg>website<span class="x" aria-hidden="true">×</span></a>
+        <a class="tab active" href="brand.html" aria-current="page"><svg class="icon"><use href="assets/icons.svg#sparkle"/></svg>brand guide<span class="x" aria-hidden="true">×</span></a>
+      </nav>
+      <button class="motion-toggle" type="button" aria-pressed="true"><svg class="icon"><use href="assets/icons.svg#sparkle"/></svg><span class="label">motion</span> <span class="state">on</span></button>
+    </div>
+    <div class="url-bar" aria-hidden="true"><span class="arrows">‹ › ↻</span><span class="url">https://daisydigital<b>/brand-guide</b></span></div>
+  </header>
+
+  <main class="page">
+    <header class="section-head">
+      <span class="micro">internal · v2</span>
+      <h2>brand guide</h2>
+      <p>one visual system: <b>daisy ✿</b> + <b>browser window ▭</b> + <b>sparkle ✦</b>, tied together with dashed "scroll" lines. if it doesn't use at least one of the three, it isn't daisy digital.</p>
+    </header>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#daisy"/></svg>logo suite</h2>
+      <p>use the wordmark when there's room, the monogram for avatars and the daisy icon for favicons and tiny spaces. animated, glitch and pixel versions are for moments, not every time.</p>
+      <div class="grid-auto" style="--min:220px">
+        <div class="tile"><div class="wordmark" style="font-size:3rem;margin:0"><span class="d1">daisy</span><br>digit<img class="daisy-i" src="assets/daisy.svg" alt="a">l</div><small>wordmark</small></div>
+        <div class="tile"><img src="assets/monogram.svg" alt="DD monogram" width="110"><small>monogram "dd"</small></div>
+        <div class="tile"><img src="assets/favicon.svg" alt="daisy icon" width="90"><small>daisy icon / favicon</small></div>
+        <div class="tile"><img src="assets/daisy.svg" alt="" width="96" style="animation:spin 6s linear infinite"><small>animated daisy</small></div>
+        <div class="tile dark"><span class="glitch" style="--src:url(assets/daisy.svg)"><img src="assets/daisy.svg" alt="" width="96"></span><small>glitch-daisy</small></div>
+        <div class="tile dark"><div class="pixel-daisy" data-pixel-daisy></div><small>pixel-daisy</small></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#heart"/></svg>colour</h2>
+      <p>lavender is home base. each section picks <b>one</b> hot colour (bubblegum, violet or baby blue) for its accents. don't glitter everything. chrome is for small highlights only.</p>
+      <div class="grid-auto" style="--min:150px">
+        <div class="swatch"><div style="background:#ede4ff"></div><p>lavender<br><code>#EDE4FF</code></p></div>
+        <div class="swatch"><div style="background:#c9b6ff"></div><p>lilac<br><code>#C9B6FF</code></p></div>
+        <div class="swatch"><div style="background:#7c3aed"></div><p>violet<br><code>#7C3AED</code></p></div>
+        <div class="swatch"><div style="background:#3b1a7a"></div><p>deep violet<br><code>#3B1A7A</code></p></div>
+        <div class="swatch"><div style="background:#ff7ac8"></div><p>bubblegum<br><code>#FF7AC8</code></p></div>
+        <div class="swatch"><div style="background:#a8d8ff"></div><p>baby blue<br><code>#A8D8FF</code></p></div>
+        <div class="swatch"><div style="background:var(--chrome)"></div><p>chrome / silver<br><code>#C9CCD6</code></p></div>
+        <div class="swatch"><div style="background:#fffbf7"></div><p>off-white<br><code>#FFFBF7</code></p></div>
+        <div class="swatch"><div style="background:#2a1450"></div><p>ink (text + borders)<br><code>#2A1450</code></p></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#message"/></svg>type</h2>
+      <p>a rounded display font for headlines, a clean sans for reading, and three accent faces used sparingly.</p>
+      <div class="type-row"><small>display · fredoka</small><span style="font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:1">stay cute, stay current</span></div>
+      <div class="type-row"><small>body · dm sans</small><span>we make brands look good, sound cool and yes, we're probably already working on your next idea.</span></div>
+      <div class="type-row"><small>accent · instrument serif italic</small><span class="serif" style="font-size:1.8rem">creative by nature</span></div>
+      <div class="type-row"><small>pixel · silkscreen</small><span style="font-family:var(--pixel)">READ AT 2:47AM</span></div>
+      <div class="type-row"><small>handwritten · caveat</small><span class="hand" style="font-size:1.8rem">love, daisy digital <span class="xo">xo</span></span></div>
+      <div class="type-row"><small>quirks</small><span style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;font-family:var(--display);font-weight:700;font-size:2rem">
+        <span class="outline">outlined</span>
+        <span class="sticker-text" style="--hot:var(--bubblegum)">sticker</span>
+        <span class="micro">trend alert</span>
+        <span class="xo" style="--hot:var(--bubblegum)">xo</span>
+      </span></div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#sparkle"/></svg>icon set</h2>
+      <p>24px grid, 1.75 stroke, round ends. all in <code>assets/icons.svg</code>, and they take on whatever colour the text is.</p>
+      <div class="grid-auto icon-grid">
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#cursor"/></svg><small>cursor</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#daisy"/></svg><small>daisy</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#heart"/></svg><small>heart</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#sparkle"/></svg><small>sparkle</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#bee"/></svg><small>bee</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#watering-can"/></svg><small>watering can</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#browser"/></svg><small>browser</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#tabs"/></svg><small>tabs</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#star"/></svg><small>star</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#butterfly"/></svg><small>butterfly</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#bolt"/></svg><small>bolt</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#film"/></svg><small>film reel</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#message"/></svg><small>message</small></div>
+        <div class="tile"><svg class="icon"><use href="assets/icons.svg#arrow"/></svg><small>arrow</small></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#star"/></svg>sticker sheet</h2>
+      <p>stickers tilt a few degrees and lift on hover. use 1–3 per section, never a wall of them.</p>
+      <div class="tile" style="display:flex;flex-wrap:wrap;gap:22px;justify-content:center;min-height:0;padding:30px">
+        <span class="badge">TREND APPROVED</span>
+        <span class="badge pink" style="--rot:5deg">VIRAL</span>
+        <span class="badge blue" style="--rot:-3deg">SOLD OUT</span>
+        <span class="badge chrome" style="--rot:7deg">404 DOLL</span>
+        <span class="badge lilac" style="--rot:-8deg">xo</span>
+        <span class="micro">currently obsessed</span>
+        <span class="micro">read at 2:47am</span>
+        <span class="micro">trend alert</span>
+        <svg class="icon" style="width:40px;height:40px;color:var(--violet)"><use href="assets/icons.svg#butterfly"/></svg>
+        <svg class="icon" style="width:40px;height:40px;color:var(--bubblegum)"><use href="assets/icons.svg#heart"/></svg>
+        <svg class="icon" style="width:40px;height:40px;color:#c99a00"><use href="assets/icons.svg#bee"/></svg>
+        <svg class="icon" style="width:40px;height:40px;color:var(--violet)"><use href="assets/icons.svg#tabs"/></svg>
+        <div class="msg-bubble" style="position:static"><span class="who">new message</span><p>u up? 👀</p></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#cursor"/></svg>cursors + sparkles</h2>
+      <p>hover each box to try the cursor. glitter trails the mouse and bursts on click. both switch off with the motion toggle or the visitor's reduce-motion setting.</p>
+      <div class="grid-auto">
+        <div class="tile cursor-demo c-daisy"><b>default: daisy</b><small>hover me</small></div>
+        <div class="tile cursor-demo c-burst"><b>links: petal burst</b><small>hover me</small></div>
+        <div class="tile cursor-demo c-text"><b>text: tiny "I"</b><small>hover me</small></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#heart"/></svg>the girls</h2>
+      <p>pixel avatars with tiny idle animations (blink, sway, typing). each girl has a signature colour and icons.</p>
+      <div class="grid-auto" style="--min:240px">
+        <div class="tile dark"><div style="width:120px" data-sprite="erica"></div><b>erica</b><small>baby blue + chrome · tabs / browser</small></div>
+        <div class="tile dark"><div style="width:120px" data-sprite="bri"></div><b>bri</b><small>bubblegum · lightning bolt / film reel</small></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#message"/></svg>voice</h2>
+      <p>lowercase, punchy, cute but sharp. we sound like a group chat that happens to be very good at marketing.</p>
+      <div class="do-dont">
+        <div class="window"><div class="window-bar"><span class="title">✓ say</span></div><div class="window-body"><ul>
+          <li>stay cute. stay current. stay on everyone's feed.</li>
+          <li>brb brainstorming · read 2:47 am · you're so on trend</li>
+          <li>buttons: give us a buzz · let's bloom · slide into our inbox</li>
+          <li>errors: lost in the scroll · this daisy hasn't bloomed yet</li>
+        </ul></div></div>
+        <div class="window"><div class="window-bar"><span class="title">✕ skip</span></div><div class="window-body"><ul>
+          <li>Title Case Corporate Headlines</li>
+          <li>"leverage synergies across verticals"</li>
+          <li>sparkles on every single word ✨✨✨</li>
+          <li>jokes that make the form harder to use</li>
+        </ul></div></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#browser"/></svg>screens</h2>
+      <p>every empty, error and success state stays on brand.</p>
+      <div class="grid-auto">
+        <a class="tile" href="404.html" data-flash-nav><span class="big-404" style="font-size:2.6rem">404</span><small>lost in the scroll</small></a>
+        <a class="tile" href="thanks.html" data-flash-nav><svg class="icon" style="width:44px;height:44px;color:var(--bubblegum)"><use href="assets/icons.svg#heart"/></svg><small>thank you</small></a>
+        <div class="tile"><div class="pixel-daisy" style="width:60px" data-pixel-daisy></div><small>loading: brb brainstorming…</small></div>
+      </div>
+    </section>
+
+    <section class="guide-section" style="padding:0">
+      <h2><svg class="icon"><use href="assets/icons.svg#bee"/></svg>email signature</h2>
+      <p>copy the code below and paste it into your email app's HTML signature setting. it uses only basic styles so it works in most email apps. the images load from the live site, so publish the site before using it.</p>
+      <div class="sig-preview">
+        <table cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;color:#2a1450;font-size:13px;line-height:1.4">
+          <tr>
+            <td style="padding-right:14px;vertical-align:top"><img src="assets/favicon.svg" width="54" height="54" alt="daisy digital" style="border-radius:14px;display:block"></td>
+            <td style="border-left:3px dashed #c9b6ff;padding-left:14px">
+              <b style="font-size:15px">[name]</b> · <span style="color:#7c3aed">[role]</span><br>
+              daisy digital ✿ <i>creative by nature</i><br>
+              <span style="color:#ff7ac8">stay cute. stay current. stay on everyone's feed.</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p style="margin-top:14px"><button class="btn" type="button" data-copy-sig>copy signature html</button></p>
+      <pre id="sig-code" style="white-space:pre-wrap;font-size:.75rem;background:var(--off-white);border:2px dashed var(--lilac);border-radius:12px;padding:14px;overflow-x:auto">&lt;table cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;color:#2a1450;font-size:13px;line-height:1.4"&gt;&lt;tr&gt;&lt;td style="padding-right:14px;vertical-align:top"&gt;&lt;img src="https://YOUR-SITE-URL/assets/favicon.svg" width="54" height="54" alt="daisy digital" style="border-radius:14px;display:block"&gt;&lt;/td&gt;&lt;td style="border-left:3px dashed #c9b6ff;padding-left:14px"&gt;&lt;b style="font-size:15px"&gt;[name]&lt;/b&gt; · &lt;span style="color:#7c3aed"&gt;[role]&lt;/span&gt;&lt;br&gt;daisy digital ✿ &lt;i&gt;creative by nature&lt;/i&gt;&lt;br&gt;&lt;span style="color:#ff7ac8"&gt;stay cute. stay current. stay on everyone's feed.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
