@@ -1,5 +1,6 @@
 import { Cutie } from "@/components/characters/Cutie";
 import { ProfileCard } from "@/components/characters/ProfileCard";
+import { BuzzCta } from "@/components/features/BuzzCta";
 import { HeroDaisy } from "@/components/features/HeroDaisy";
 import { WorkCard } from "@/components/features/WorkCard";
 import h from "@/components/features/hero.module.css";
@@ -28,7 +29,7 @@ export default function Home() {
               <p>{home.body}</p>
             </div>
             <div className={h.ctaRow}>
-              <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
+              <BuzzCta label={home.cta} />
               <Annotation>love, daisy digital xo</Annotation>
             </div>
           </BrowserWindow>
@@ -98,7 +99,7 @@ export default function Home() {
       <Section accent="pink" labelledBy="cta-title" className={s.cta}>
         <h2 id="cta-title" className={s.ctaTitle}>{home.ctaTitle}</h2>
         <p className={s.ctaBody}>{home.ctaBody}</p>
-        <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
+        <BuzzCta label={home.cta} />
       </Section>
     </main>
   );
