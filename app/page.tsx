@@ -1,11 +1,115 @@
-import Link from "next/link";
+import { Cutie } from "@/components/characters/Cutie";
+import { ProfileCard } from "@/components/characters/ProfileCard";
+import { HeroDaisy } from "@/components/features/HeroDaisy";
+import { WorkCard } from "@/components/features/WorkCard";
+import h from "@/components/features/hero.module.css";
+import w from "@/components/features/work.module.css";
+import { Icon, type IconName } from "@/components/icons/Icon";
+import { BrowserWindow } from "@/components/system/BrowserWindow";
+import { Section, SectionHead } from "@/components/system/layout";
+import { Annotation, Badge, Button, Divider, Marquee, MicroLabel, Polaroid, Sticker, StickyNote, TornPaper } from "@/components/system/primitives";
+import { brand, home, team, work } from "@/content/site";
+import s from "./home.module.css";
+
+const tints = ["var(--bubblegum)", "var(--baby-blue)", "var(--lilac)"];
 
 export default function Home() {
   return (
-    <main id="main" className="container-dd" style={{ paddingBlock: 80 }}>
-      <span className="micro-label">brb brainstorming</span>
-      <h1 style={{ fontSize: "3rem" }}>daisy digital</h1>
-      <p>the new site is blooming. <Link href="/styleguide/">see the style guide</Link>.</p>
+    <main id="main">
+      {/* HERO: desktop collage → stacked on mobile */}
+      <Section accent="pink" className={h.hero}>
+        <div className={h.collage}>
+          <BrowserWindow as="article" tab="about_us.txt" icon="daisy" url="daisydigital.com" className={h.main}>
+            <MicroLabel secret="psst… we already have ideas">{home.label}</MicroLabel>
+            <h1 className={h.wordmark}><span>daisy</span><br />digital</h1>
+            <p className={`text-serif ${h.tagline}`}>{brand.tagline}</p>
+            <div className={h.copy}>
+              <p className={h.lead}>{home.intro}</p>
+              <p>{home.body}</p>
+              <p>{brand.motto}</p>
+            </div>
+            <div className={h.ctaRow}>
+              <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
+              <Annotation>love, daisy digital xo</Annotation>
+            </div>
+          </BrowserWindow>
+
+          <HeroDaisy />
+
+          <div className={h.polaroids}>
+            {home.polaroids.slice(0, 2).map((p, i) => (
+              <Sticker key={p.caption} seed={`hero-pol-${i}`} dieCut className={i === 0 ? h.pol1 : h.pol2}>
+                <Polaroid caption={p.caption} icon={p.icon as IconName} tint={tints[i]} motionBlur={i === 1} />
+              </Sticker>
+            ))}
+          </div>
+
+          <Sticker seed="hero-note" className={h.note}><StickyNote items={home.stickyNote} /></Sticker>
+
+          <TornPaper className={h.torn}>
+            <ul className={h.services} aria-label={home.servicesTitle}>
+              {home.services.map((sv) => (
+                <li key={sv.name}><Icon name={sv.icon as IconName} size={18} />{sv.name}</li>
+              ))}
+            </ul>
+          </TornPaper>
+
+          <span className={h.badge}><Badge>TREND APPROVED</Badge></span>
+          <Cutie who="erica" pose="float" className={h.erica} />
+        </div>
+      </Section>
+
+      <Marquee />
+
+      {/* SERVICES */}
+      <Section accent="violet" labelledBy="services-title">
+        <SectionHead id="services-title" label="trend alert" title={home.servicesTitle} intro={brand.motto} />
+        <ul className={s.services}>
+          {home.services.map((sv) => (
+            <li key={sv.name}>
+              <Sticker seed={`svc-${sv.name}`} max={2} className={s.serviceSticker}>
+                <div className={s.service}>
+                  <span className={s.serviceIcon}><Icon name={sv.icon as IconName} size={26} /></span>
+                  <h3>{sv.name}</h3>
+                  <p>{sv.blurb}</p>
+                </div>
+              </Sticker>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Divider variant="daisy" />
+
+      {/* FEATURED WORK */}
+      <Section accent="blue" labelledBy="work-title">
+        <SectionHead id="work-title" label="currently obsessed" title={home.workTitle} intro="brands we've had the pleasure of making look good" />
+        <ul className={w.grid}>
+          {work.filter((c) => c.featured).map((c, i, arr) => (
+            <li key={c.slug}>
+              {i === arr.length - 1 && <span className={w.peek}><Cutie who="bri" pose="peek" /></span>}
+              <div className={w.cardWrap}><WorkCard c={c} /></div>
+            </li>
+          ))}
+        </ul>
+        <p className={s.more}><Button href="/work/" icon="arrow">see all the work</Button></p>
+      </Section>
+
+      {/* TEAM TEASER */}
+      <Section accent="pink" dark labelledBy="team-title">
+        <SectionHead id="team-title" label="top 8" title={home.teamTitle} intro="the brains (and the tabs) behind it all" />
+        <div className={s.team}>
+          {team.map((m) => <ProfileCard key={m.slug} m={m} compact />)}
+        </div>
+        <p className={s.more}><Button href="/team/" icon="heart">meet the girls</Button></p>
+      </Section>
+
+      {/* CTA */}
+      <Section accent="pink" labelledBy="cta-title" className={s.cta}>
+        <h2 id="cta-title" className={s.ctaTitle}>{home.ctaTitle}</h2>
+        <p className={s.ctaBody}>{brand.motto}</p>
+        <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
+      </Section>
     </main>
   );
 }

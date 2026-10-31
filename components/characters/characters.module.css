@@ -1,0 +1,28 @@
+/* ---------- Cutie ---------- */
+.cutie { position: relative; display: inline-block; width: var(--size, 96px); line-height: 0; }
+.sprite { width: 100%; height: auto; image-rendering: pixelated; overflow: visible; animation: sway 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
+.blink { opacity: 0; animation: blink 4.2s steps(1) infinite; }
+.typing { opacity: 0; animation: typing 0.5s steps(1) infinite; }
+@keyframes sway { 50% { rotate: 3deg; } }
+@keyframes blink { 0%, 92% { opacity: 0; } 93%, 97% { opacity: 1; } 98% { opacity: 0; } }
+@keyframes typing { 50% { opacity: 1; } }
+
+/* poses */
+.stand {}
+.float { animation: float 4.5s ease-in-out infinite; }
+@keyframes float { 50% { translate: 0 -10px; rotate: 3deg; } }
+.peek { --size: 64px; } /* head only; parent positions it over a card edge */
+.sit { --size: 58px; }
+.hold { padding-right: 8%; }
+.heldDaisy { position: absolute; width: 38%; right: -4%; bottom: 18%; rotate: -12deg; animation: sway 2.4s ease-in-out infinite; }
+
+/* sparkle backdrop, low-res GIF energy */
+.sparkles::before {
+  content: ""; position: absolute; inset: -14%; z-index: -1; border-radius: 16px;
+  background:
+    radial-gradient(circle, #fff 0 1.5px, transparent 2px) 0 0 / 22px 22px,
+    radial-gradient(circle, var(--hot, var(--bubblegum)) 0 1.5px, transparent 2px) 11px 11px / 22px 22px;
+  animation: twinkle 1.2s steps(2) infinite;
+  opacity: 0.8;
+}
+@keyframes twinkle { 50% { opacity: 0.35; } }

@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fredoka, Instrument_Serif, Silkscreen } from "next/font/google";
 import { ViewTransition } from "react";
+import { DMFooter } from "@/components/features/DMFooter";
+import { InlineScript } from "@/components/InlineScript";
 import { Toaster } from "@/components/motion/Toaster";
 import { TabNav } from "@/components/system/TabNav";
 import { brand } from "@/content/site";
@@ -31,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: calmScript }} />
+        <InlineScript html={calmScript} />
       </head>
       <body>
         <a href="#main" className="skip-link">skip to content</a>
@@ -44,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           <div className="page-shell">{children}</div>
         </ViewTransition>
+        <DMFooter />
         <Toaster />
       </body>
     </html>
