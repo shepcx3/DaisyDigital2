@@ -24,11 +24,11 @@ export function Section({ accent, dark, children, className, id, labelledBy, blo
 }
 
 export function SectionHead({ label, secret, title, intro, id, as: H = "h2", align = "center" }: {
-  label: string; secret?: string; title: ReactNode; intro?: ReactNode; id?: string; as?: "h1" | "h2"; align?: "center" | "left";
+  label?: string; secret?: string; title: ReactNode; intro?: ReactNode; id?: string; as?: "h1" | "h2"; align?: "center" | "left";
 }) {
   return (
     <header className={cx(s.head, align === "left" && s.left)}>
-      <MicroLabel secret={secret}>{label}</MicroLabel>
+      {label && <MicroLabel secret={secret}>{label}</MicroLabel>}
       <H id={id} className={cx(H === "h1" ? s.h1 : s.h2, "dd-heading")}>{title}</H>
       {intro && <p className={s.intro}>{intro}</p>}
     </header>

@@ -7,7 +7,7 @@ import w from "@/components/features/work.module.css";
 import { Icon, type IconName } from "@/components/icons/Icon";
 import { BrowserWindow } from "@/components/system/BrowserWindow";
 import { Section, SectionHead } from "@/components/system/layout";
-import { Annotation, Badge, Button, Divider, Marquee, MicroLabel, Polaroid, Sticker, StickyNote, TornPaper } from "@/components/system/primitives";
+import { Annotation, Button, Divider, Marquee, MicroLabel, Polaroid, Sticker, StickyNote } from "@/components/system/primitives";
 import { brand, home, team, work } from "@/content/site";
 import s from "./home.module.css";
 
@@ -21,12 +21,11 @@ export default function Home() {
         <div className={h.collage}>
           <BrowserWindow as="article" tab="about_us.txt" icon="daisy" url="daisydigital.com" className={h.main}>
             <MicroLabel secret="psst… we already have ideas">{home.label}</MicroLabel>
-            <h1 className={h.wordmark}><span>daisy</span><br />digital</h1>
+            <h1 className={h.wordmark}><span>daisy</span>{" "}<br />digital</h1>
             <p className={`text-serif ${h.tagline}`}>{brand.tagline}</p>
             <div className={h.copy}>
               <p className={h.lead}>{home.intro}</p>
               <p>{home.body}</p>
-              <p>{brand.motto}</p>
             </div>
             <div className={h.ctaRow}>
               <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
@@ -46,15 +45,6 @@ export default function Home() {
 
           <Sticker seed="hero-note" className={h.note}><StickyNote items={home.stickyNote} /></Sticker>
 
-          <TornPaper className={h.torn}>
-            <ul className={h.services} aria-label={home.servicesTitle}>
-              {home.services.map((sv) => (
-                <li key={sv.name}><Icon name={sv.icon as IconName} size={18} />{sv.name}</li>
-              ))}
-            </ul>
-          </TornPaper>
-
-          <span className={h.badge}><Badge>TREND APPROVED</Badge></span>
           <Cutie who="erica" pose="float" className={h.erica} />
         </div>
       </Section>
@@ -63,7 +53,7 @@ export default function Home() {
 
       {/* SERVICES */}
       <Section accent="violet" labelledBy="services-title">
-        <SectionHead id="services-title" label="trend alert" title={home.servicesTitle} intro={brand.motto} />
+        <SectionHead id="services-title" title={home.servicesTitle} intro={home.servicesIntro} />
         <ul className={s.services}>
           {home.services.map((sv) => (
             <li key={sv.name}>
@@ -83,7 +73,7 @@ export default function Home() {
 
       {/* FEATURED WORK */}
       <Section accent="blue" labelledBy="work-title">
-        <SectionHead id="work-title" label="currently obsessed" title={home.workTitle} intro="brands we've had the pleasure of making look good" />
+        <SectionHead id="work-title" title={home.workTitle} intro={home.workIntro} />
         <ul className={w.grid}>
           {work.filter((c) => c.featured).map((c, i, arr) => (
             <li key={c.slug}>
@@ -97,7 +87,7 @@ export default function Home() {
 
       {/* TEAM TEASER */}
       <Section accent="pink" dark labelledBy="team-title">
-        <SectionHead id="team-title" label="top 8" title={home.teamTitle} intro="the brains (and the tabs) behind it all" />
+        <SectionHead id="team-title" title={home.teamTitle} intro="the brains (and the tabs) behind it all" />
         <div className={s.team}>
           {team.map((m) => <ProfileCard key={m.slug} m={m} compact />)}
         </div>
@@ -107,7 +97,7 @@ export default function Home() {
       {/* CTA */}
       <Section accent="pink" labelledBy="cta-title" className={s.cta}>
         <h2 id="cta-title" className={s.ctaTitle}>{home.ctaTitle}</h2>
-        <p className={s.ctaBody}>{brand.motto}</p>
+        <p className={s.ctaBody}>{home.ctaBody}</p>
         <Button href="/contact/" hot glow icon="bee">{home.cta}</Button>
       </Section>
     </main>

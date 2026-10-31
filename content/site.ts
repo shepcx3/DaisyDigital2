@@ -44,15 +44,18 @@ export const home = {
   ],
   stickyNote: ["check all 473 tabs", "spot the trend first", "make ur brand everyone's fyp"],
   servicesTitle: "what we do",
+  servicesIntro: "four ways we keep your brand a few scrolls ahead.",
   services: [
     { name: "social media", icon: "heart", blurb: "feeds that people actually stop scrolling for." },
     { name: "content", icon: "film", blurb: "photo, video and the random 2am idea that becomes a campaign." },
     { name: "strategy", icon: "tab", blurb: "knowing what's next before it's on everyone's fyp." },
     { name: "consulting", icon: "sparkle", blurb: "a second brain (with 473 tabs open) for your brand." },
   ],
-  workTitle: "featured work",
+  workTitle: "brands we've worked with",
+  workIntro: "and more. the full stories are blooming soon.",
   teamTitle: "meet the girls",
   ctaTitle: "got an idea? we're already obsessed.",
+  ctaBody: "tell us about your brand, your big idea, or your random 2am thought.",
 };
 
 export type CaseStudy = {
@@ -138,6 +141,9 @@ export const contact = {
   title: "give us a buzz",
   intro: "tell us about your brand, your big idea, or your random 2am thought.",
   submit: "slide into our inbox",
+  // shown under the button while brand.formEndpoint is empty (the form opens the visitor's email app)
+  mailtoNote: "this opens your email app with your message ready to send.",
+  direct: "rather write it yourself?",
   services: ["Social media", "Content", "Strategy", "Consulting", "All of the above"],
   errors: {
     name: "we need something to call you ✿",

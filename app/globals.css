@@ -61,10 +61,14 @@ img, svg { max-width: 100%; }
 }
 .surface-violet { background: var(--violet-deep); color: var(--offwhite); }
 
+/* ---------- browser surfaces ---------- */
+::placeholder { color: #6e5f8f; opacity: 1; } /* 5.9:1 on white */
+::selection { background: var(--bubblegum); color: var(--ink); }
+
 /* ---------- type utilities ---------- */
 .micro-label {
   font-family: var(--font-silkscreen), ui-monospace, monospace;
-  font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1;
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1;
   display: inline-flex; align-items: center; gap: 6px;
   padding: 5px 9px; border-radius: 999px;
   background: var(--offwhite); color: var(--ink); border: 2px solid var(--ink);

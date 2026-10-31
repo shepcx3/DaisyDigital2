@@ -19,14 +19,14 @@
 .dots i:nth-child(3) { background: var(--lilac); }
 .tabLabel {
   display: inline-flex; align-items: center; gap: 6px; min-width: 0;
-  font-family: var(--font-silkscreen); font-size: 10.5px; letter-spacing: 0.06em; text-transform: lowercase;
+  font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.04em; text-transform: lowercase;
   background: var(--offwhite); border: 2px solid var(--ink); border-radius: 8px;
   padding: 4px 10px; flex: 0 1 auto; max-width: 60%;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .url {
   flex: 1 1 0; min-width: 0;
-  font-family: var(--font-silkscreen); font-size: 10px; letter-spacing: 0.04em;
+  font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.02em;
   background: var(--offwhite); border: 2px solid var(--ink); border-radius: 999px; padding: 3px 10px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }

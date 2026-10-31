@@ -37,7 +37,7 @@
 .calm {
   margin: 0 0 6px auto; flex: none;
   display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--font-silkscreen); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
   background: var(--offwhite); color: var(--ink);
   border: 2px solid var(--ink); border-radius: 999px; padding: 7px 11px;
 }
@@ -48,11 +48,11 @@
 .urlInner {
   display: flex; align-items: center; gap: 10px;
   max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding: 7px var(--gutter);
-  font-family: var(--font-silkscreen); font-size: 10px; letter-spacing: 0.06em;
+  font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.04em;
 }
 .arrows { letter-spacing: 6px; opacity: 0.45; }
 .url { flex: 1; min-width: 0; background: var(--lavender); border: 2px solid var(--ink); border-radius: 999px; padding: 4px 12px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.url b { color: var(--violet); font-weight: 400; }
+.url b { color: var(--violet-deep); font-weight: 400; }
 
 /* ---------- mobile: tabs move to a bottom bar ---------- */
 .bottom { display: none; }

@@ -17,13 +17,13 @@
 .lock { min-height: 80vh; display: grid; place-items: center; padding: 40px var(--gutter); background: var(--violet-deep); color: var(--offwhite); }
 .lockInner { width: min(380px, 100%); display: grid; justify-items: center; gap: 18px; text-align: center; }
 .clock { font-family: var(--font-fredoka); font-weight: 600; font-size: clamp(4rem, 18vw, 6rem); line-height: 1; letter-spacing: -0.03em; }
-.date { font-family: var(--font-silkscreen); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lilac); }
+.date { font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lilac); }
 .notif {
   width: 100%; text-align: left; color: var(--ink);
   background: color-mix(in srgb, var(--offwhite) 92%, transparent); border: var(--border); border-radius: 22px; padding: 14px 16px;
   box-shadow: var(--shadow);
 }
-.notifHead { display: flex; align-items: center; gap: 8px; font-family: var(--font-silkscreen); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.notifHead { display: flex; align-items: center; gap: 8px; font-family: var(--font-silkscreen); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
 .notifHead span:last-child { margin-left: auto; color: var(--ink-soft); }
 .notif p { margin: 0 0 12px; }
 .pw { display: flex; gap: 8px; }

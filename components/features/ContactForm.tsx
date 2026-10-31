@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Icon } from "@/components/icons/Icon";
 import { Button } from "@/components/system/primitives";
-import { contact } from "@/content/site";
+import { brand, contact } from "@/content/site";
 import { sendForm } from "@/lib/forms";
 import s from "./forms.module.css";
 
@@ -76,6 +76,10 @@ export function ContactForm() {
       <div className={s.actions}>
         <Button type="submit" hot glow icon="arrow">{contact.submit}</Button>
       </div>
+      <p className={s.hint}>
+        {!brand.formEndpoint && <>{contact.mailtoNote} </>}
+        {contact.direct} <a href={`mailto:${brand.email}`} className={s.mail}>{brand.email}</a>
+      </p>
       <p className={`${s.status} ${status?.ok ? s.ok : s.bad}`} role="status">{status?.text}</p>
     </form>
   );
