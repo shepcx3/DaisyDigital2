@@ -84,6 +84,14 @@
 .btn:hover { transform: translate(-1px, -2px); box-shadow: 4px 6px 0 var(--ink); }
 .btn:active { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--ink); }
 .btnHot { background: var(--hot); }
+/* sparkle hover feedback */
+.btn { position: relative; }
+.btn::after {
+  content: "✦"; position: absolute; top: -10px; right: -6px; font-size: 16px; color: var(--violet);
+  scale: 0; rotate: -40deg; transition: scale var(--dur-base) var(--ease-bounce), rotate var(--dur-base) var(--ease-bounce);
+  pointer-events: none;
+}
+.btn:hover::after, .btn:focus-visible::after { scale: 1; rotate: 0deg; }
 .btn svg { width: 18px; height: 18px; }
 
 /* ============ Polaroid ============ */

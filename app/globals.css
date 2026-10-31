@@ -98,9 +98,11 @@ html[data-calm="on"] *, html[data-calm="on"] *::before, html[data-calm="on"] *::
   animation-iteration-count: 1 !important;
   transition-duration: 0.001ms !important;
 }
-html[data-calm="on"] ::view-transition-group(*),
-html[data-calm="on"] ::view-transition-old(*),
-html[data-calm="on"] ::view-transition-new(*) { animation: none !important; }
+/* calm mode keeps page transitions, but only as a quick fade */
+html[data-calm="on"] ::view-transition-group(*) { animation-duration: 150ms !important; }
+html[data-calm="on"] ::view-transition-old(*) { animation: 150ms ease both vt-fade-out !important; }
+html[data-calm="on"] ::view-transition-new(*) { animation: 150ms ease both vt-fade-in !important; }
+@keyframes vt-fade-in { from { opacity: 0; } }
 
 /* ---------- page transitions ---------- */
 /* default: "new tab opening" (window scales up from the top) */

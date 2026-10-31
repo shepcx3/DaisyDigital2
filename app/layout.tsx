@@ -3,6 +3,7 @@ import { DM_Sans, Fredoka, Instrument_Serif, Silkscreen } from "next/font/google
 import { ViewTransition } from "react";
 import { DMFooter } from "@/components/features/DMFooter";
 import { InlineScript } from "@/components/InlineScript";
+import { Sparkles } from "@/components/motion/Sparkles";
 import { Toaster } from "@/components/motion/Toaster";
 import { TabNav } from "@/components/system/TabNav";
 import { brand } from "@/content/site";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </ViewTransition>
         <DMFooter />
         <Toaster />
+        <Sparkles />
       </body>
     </html>
   );
