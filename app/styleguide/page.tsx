@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Icon, iconNames } from "@/components/icons/Icon";
 import { BrowserWindow } from "@/components/system/BrowserWindow";
+import { Loader } from "@/components/system/Loader";
 import { Annotation, Badge, Button, Divider, Marquee, MicroLabel, Polaroid, Sticker, StickyNote, TornPaper } from "@/components/system/primitives";
 import { durations, easings, springs } from "@/lib/motion";
 import s from "./styleguide.module.css";
@@ -166,6 +167,10 @@ export default function StyleguidePage() {
         <h2><Icon name="bee" /> motion</h2>
         <p>bouncy but quick. one config in <code>lib/motion.ts</code>. nothing over 600ms except the loader. calm mode turns it all off.</p>
         <pre className={s.code}>{JSON.stringify({ durations, easings, springs }, null, 2)}</pre>
+        <div className={s.tile} style={{ marginTop: 20 }}>
+          <Loader />
+          <small>loader · only appears after 300ms</small>
+        </div>
       </section>
     </main>
   );

@@ -68,7 +68,7 @@ export function DMFooter() {
             )}
           </div>
 
-          <p className={`${s.them} ${s.typing}`} aria-label="typing"><i /><i /><i /></p>
+          <p className={`${s.them} ${s.typing}`}><span className="sr-only">typing…</span><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /></p>
         </div>
       </div>
 

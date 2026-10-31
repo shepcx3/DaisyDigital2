@@ -11,10 +11,11 @@ import { brand } from "@/content/site";
 import { asset } from "@/lib/utils";
 import "./globals.css";
 
-const fredoka = Fredoka({ variable: "--font-fredoka", subsets: ["latin"], weight: ["500", "600", "700"] });
+// display + body fonts are preloaded; the two accent fonts load after first paint (they swap in)
+const fredoka = Fredoka({ variable: "--font-fredoka", subsets: ["latin"] });
 const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"] });
-const silkscreen = Silkscreen({ variable: "--font-silkscreen", subsets: ["latin"], weight: "400" });
-const instrumentSerif = Instrument_Serif({ variable: "--font-instrument-serif", subsets: ["latin"], weight: "400", style: "italic" });
+const silkscreen = Silkscreen({ variable: "--font-silkscreen", subsets: ["latin"], weight: "400", preload: false });
+const instrumentSerif = Instrument_Serif({ variable: "--font-instrument-serif", subsets: ["latin"], weight: "400", style: "italic", preload: false });
 
 export const metadata: Metadata = {
   title: { default: `${brand.name} ✿ ${brand.tagline}`, template: `%s ✿ ${brand.name}` },

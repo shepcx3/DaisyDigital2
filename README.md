@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# daisy digital ✿
 
-## Getting Started
+*creative by nature.* The marketing site for Daisy Digital (social media, content, strategy and consulting).
 
-First, run the development server:
+Built with Next.js 16 (App Router), TypeScript, Tailwind v4, React Three Fiber, exported as a static site and hosted on GitHub Pages.
+
+## One visual system
+
+Three motifs, used everywhere: **the daisy** (logo, cursor, loader, dividers, easter eggs), **the browser window** (nav tabs, case studies, team cards, forms) and **the sparkle** (cursor trail, click bursts, hover feedback, badges). Everything else is a sticker, and stickers are seasoning (2–3 per screen, max).
+
+See it all on **`/styleguide`**: every colour, type style, icon, component and motion preset.
+
+## Where things live
+
+| Path | What |
+|---|---|
+| `content/site.ts` | **all the words.** Edit copy, case studies and team bios here. `[placeholder]` marks things still needed from the client |
+| `app/tokens.css` | design tokens: colours, radii, borders, shadows, motion timings |
+| `app/globals.css` | grain, cursors, type utilities, focus rings, calm mode, page transitions |
+| `lib/motion.ts` | the one motion config (durations, easings, springs) |
+| `components/system/` | BrowserWindow, TabNav, Sticker, Badge, Button, Polaroid, StickyNote, TornPaper, Divider, Marquee, MicroLabel, Annotation, Loader |
+| `components/characters/` | `<Cutie who pose />` pixel avatars + team ProfileCard (placeholder art in `sprites.ts`) |
+| `components/features/` | bee button, watering can, 3D chrome daisy, forms, DMs footer, easter eggs |
+| `app/*` | pages: home, work (+ case studies), team, careers, contact, thanks, password, 404 |
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying (GitHub Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every push to `main` builds and publishes the site via `.github/workflows/deploy.yml`.
 
-## Learn More
+**One-time setup:** on GitHub open the repo → **Settings → Pages → Source: GitHub Actions**.
 
-To learn more about Next.js, take a look at the following resources:
+The site will be at `https://shepcx3.github.io/DaisyDigital2/`. If you add a custom domain later, change `PAGES_BASE_PATH` in the workflow to an empty string so links point at the domain root.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Before launch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Email + forms:** set `brand.email` and `brand.formEndpoint` (e.g. a [Formspree](https://formspree.io) URL) in `content/site.ts`. Without an endpoint, forms open the visitor's email app. Resume uploads need a form service that accepts files.
+2. **Placeholders:** case study details, team moods/trends, and character art (`components/characters/sprites.ts` → swap for real sprite sheets).
+3. **Photos:** pass `src` to `<Polaroid>` and the flash-photo treatment applies automatically.
+4. **Password screen** (`/password`) is design-only. GitHub Pages can't protect a page; real protection needs server hosting such as Vercel.
 
-## Deploy on Vercel
+## Easter eggs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ↑ ↑ ↓ ↓ ← → ← → B A toggles sparkle mode (extra glitter + chrome-shimmer headings).
+- Four hidden daisies (work, team, careers, footer). Find them all for the same reward.
+- Hover the micro-labels for secrets. The "+" tab does something cute.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Calm mode
+
+Follows the visitor's reduced-motion setting, and there's a "calm mode" toggle in the nav (saved per visitor). It turns off the glitter, custom cursors, the bee flight, the 3D daisy and the marquee, and page transitions become simple fades.

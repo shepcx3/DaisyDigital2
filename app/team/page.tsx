@@ -14,7 +14,7 @@ export default function TeamPage() {
       <Section accent="violet" dark labelledBy="team-h">
         <SectionHead as="h1" id="team-h" label="top 8" secret="erica is #1 in her own top 8" title="the girls" intro="the brains (and the tabs) behind it all" />
         <div className={s.grid}>
-          {team.map((m) => <ProfileCard key={m.slug} m={m} />)}
+          {team.map((m) => <ProfileCard key={m.slug} m={m} headingLevel={2} />)}
         </div>
         <div className={s.holder} aria-hidden="true"><Cutie who="bri" pose="hold" /></div>
         <HiddenDaisy id="team" className={s.egg} />

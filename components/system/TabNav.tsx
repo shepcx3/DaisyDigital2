@@ -28,7 +28,7 @@ export function TabNav() {
     <>
       <header className={s.top}>
         <div className={s.row}>
-          <Link href="/" className={s.logo} aria-label="daisy digital home" transitionTypes={["tab-open"]}>DD</Link>
+          <Link href="/" className={s.logo} aria-label="DD, daisy digital home" transitionTypes={["tab-open"]}>DD</Link>
           <nav className={s.tabs} aria-label="main">
             {nav.map((t) => {
               const active = isActive(path, t.href);

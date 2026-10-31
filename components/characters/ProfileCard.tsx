@@ -6,7 +6,8 @@ import { Cutie } from "./Cutie";
 import s from "./profile.module.css";
 
 /** MySpace-esque profile page inside a BrowserWindow. The member's signature colour is the card's hot accent. */
-export function ProfileCard({ m, compact }: { m: Member; compact?: boolean }) {
+export function ProfileCard({ m, compact, headingLevel = 3 }: { m: Member; compact?: boolean; headingLevel?: 2 | 3 }) {
+  const H = headingLevel === 2 ? "h2" : "h3";
   return (
     <div data-accent={m.accent} className={s.wrap}>
       <BrowserWindow as="article" tab={`${m.name}'s profile`} icon={m.icon} url={`myspace.com/${m.slug}`} className={s.card} aria-labelledby={`p-${m.slug}`}>
@@ -16,7 +17,7 @@ export function ProfileCard({ m, compact }: { m: Member; compact?: boolean }) {
             <Cutie who={m.slug} sparkles label={`pixel art of ${m.name}`} />
           </div>
           <div>
-            <h3 id={`p-${m.slug}`} className={s.name}>{m.name}</h3>
+            <H id={`p-${m.slug}`} className={s.name}>{m.name}</H>
             <p className={`text-serif ${s.role}`}>{m.role}</p>
             <span className={s.icons} aria-hidden="true">
               <span><Icon name={m.icon} size={16} /></span>
