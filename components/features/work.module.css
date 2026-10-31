@@ -20,3 +20,15 @@ a.link::after { content: ""; position: absolute; inset: 0; } /* whole card is cl
 .empty p { margin: 0; font-family: var(--font-instrument-serif); font-style: italic; font-size: 1.2rem; }
 .egg { right: 3%; bottom: 24px; }
 @media (max-width: 560px) { .link { min-height: 92px; gap: 6px; } .grid { gap: 20px; } }
+
+/* brand tiles develop like the polaroids as they scroll into view (scroll-driven; static where unsupported) */
+@supports (animation-timeline: view()) {
+  /* on the wrapper, not the window body: the window clips (overflow), so view() inside it would track the frame, not the page */
+  .cardWrap { animation: tile-develop linear both; animation-timeline: view(); animation-range: entry 15% cover 42%; }
+  @keyframes tile-develop {
+    from { filter: saturate(0) sepia(0.35) contrast(0.55) brightness(1.2); }
+    55% { filter: saturate(0.4) sepia(0.2) contrast(0.8) brightness(1.06); }
+    to { filter: none; }
+  }
+}
+:global(html[data-calm="on"]) .cardWrap { animation: none; }
