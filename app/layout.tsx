@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fredoka, Instrument_Serif, Silkscreen } from "next/font/google";
+import { ViewTransition } from "react";
+import { Toaster } from "@/components/motion/Toaster";
+import { TabNav } from "@/components/system/TabNav";
 import { brand } from "@/content/site";
 import { asset } from "@/lib/utils";
 import "./globals.css";
@@ -32,7 +35,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body>
         <a href="#main" className="skip-link">skip to content</a>
-        {children}
+        <TabNav />
+        {/* page transitions: "new tab opening" by default, camera flash for work detail pages */}
+        <ViewTransition
+          enter={{ "tab-open": "tab-open", "cam-flash": "cam-flash", default: "none" }}
+          exit={{ "tab-open": "tab-open", "cam-flash": "cam-flash", default: "none" }}
+          default="none"
+        >
+          <div className="page-shell">{children}</div>
+        </ViewTransition>
+        <Toaster />
       </body>
     </html>
   );

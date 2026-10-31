@@ -47,6 +47,9 @@ img, svg { max-width: 100%; }
 }
 .skip-link:focus { translate: 0 0; }
 
+.page-shell { min-height: 70vh; }
+@media (max-width: 760px) { body { padding-bottom: 92px; } } /* room for the bottom tab bar */
+
 .container-dd { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
 
 /* ---------- texture: grain only on purple surfaces ---------- */

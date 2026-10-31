@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Icon, iconNames } from "@/components/icons/Icon";
+import { BrowserWindow } from "@/components/system/BrowserWindow";
+import { Annotation, Badge, Button, Divider, Marquee, MicroLabel, Polaroid, Sticker, StickyNote, TornPaper } from "@/components/system/primitives";
 import { durations, easings, springs } from "@/lib/motion";
 import s from "./styleguide.module.css";
 
@@ -91,6 +93,74 @@ export default function StyleguidePage() {
           ))}
         </div>
       </section>
+
+      <section className={s.section} data-accent="pink">
+        <h2><Icon name="tab" /> components</h2>
+        <p>the building blocks. every page is made from these and nothing else.</p>
+
+        <div className={s.demoGrid}>
+          <BrowserWindow tab="browser_window.exe" icon="tab" url="daisydigital.com/work/bloom">
+            <p style={{ margin: 0 }}>title bar with three dots, a tab label, an optional url bar, and a slot for anything.</p>
+          </BrowserWindow>
+
+          <div className={s.tile} style={{ alignContent: "center" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
+              <Button hot glow icon="bee">give us a buzz</Button>
+              <Button icon="daisy">let&apos;s bloom</Button>
+              <Button icon="arrow">slide into our inbox</Button>
+            </div>
+            <small>button · hot + glow is for primary ctas only</small>
+          </div>
+
+          <div className={s.tile}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
+              <Badge icon="sparkle">VIRAL</Badge>
+              <Badge>TREND APPROVED</Badge>
+              <Badge chrome>404 DOLL</Badge>
+              <Badge>SOLD OUT</Badge>
+              <Badge icon="star">NEW</Badge>
+            </div>
+            <small>badge</small>
+          </div>
+
+          <div className={s.tile}>
+            <div style={{ display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+              <MicroLabel>trend alert</MicroLabel>
+              <MicroLabel secret="psst… erica saw it first">currently obsessed</MicroLabel>
+            </div>
+            <Annotation>hover the second one</Annotation>
+            <small>micro-label · hover secret · annotation</small>
+          </div>
+
+          <div className={s.tile}>
+            <div style={{ display: "flex", gap: 18, justifyContent: "center" }}>
+              <Sticker seed="sg-pol-1" dieCut>
+                <div style={{ width: 140 }}><Polaroid caption="brainstorm @ 2:47am" icon="message" tint="var(--bubblegum)" /></div>
+              </Sticker>
+              <Sticker seed="sg-pol-2" dieCut>
+                <div style={{ width: 140 }}><Polaroid caption="content day" icon="film" tint="var(--baby-blue)" motionBlur /></div>
+              </Sticker>
+            </div>
+            <small>sticker + polaroid (hover to peel)</small>
+          </div>
+
+          <div className={s.tile}>
+            <Sticker seed="sg-note"><StickyNote items={["check all 473 tabs", "spot the trend first"]} /></Sticker>
+            <TornPaper><b>torn paper</b> edge, made with an svg mask</TornPaper>
+            <small>sticky note · torn paper</small>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gap: 26, marginTop: 30 }}>
+          <Divider variant="daisy" />
+          <Divider variant="squiggle" />
+          <Divider variant="dashed" />
+          <Divider variant="pixel" />
+        </div>
+        <p style={{ marginTop: 10 }}><small>dividers: daisy chain · squiggle · dashed · pixel</small></p>
+      </section>
+
+      <div style={{ marginTop: 40 }}><Marquee /></div>
 
       <section className={s.section}>
         <h2><Icon name="bee" /> motion</h2>
